@@ -1,29 +1,26 @@
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import Home from "./Home.js";
-import About from "./About.js";
-import Contact from "./Contact.js";
-import Header from "./Header.js";
-import Footer from "./Footer.js";
+import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 
-import 'Bootstrap/bootstrap.css';
-import './App.css';
+import Index from "./pages/index.js";
+import About from "./pages/about";
+import Contact from "./pages/contact";
+import Shop from "./pages/shop";
+import Blog from "./pages/blog";
+
+const { PUBLIC_URL } = process.env;
 
 function App() {
   return (
-
-
-
+    
     <div>
-      
-      <Header/>
-      <Router>
+      <Router basename={PUBLIC_URL}>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Index />} />
+          <Route path="/shop" element={<Shop />} />
           <Route path="/about-us" element={<About />} />
+          <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </Router>
-      <Footer />
     </div>
 
   );

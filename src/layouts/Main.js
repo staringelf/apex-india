@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 
-import Navigation from '../components/Template/Navigation';
+import Navigation from 'components/Template/Navigation';
 
 const Main = (props) => (
   <HelmetProvider>

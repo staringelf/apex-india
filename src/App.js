@@ -19,6 +19,19 @@ function App() {
           <Route path="/about-us" element={<About />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/phone" element={<Contact />} component={() => { 
+            window.location.href = 'tel:+918427185921'; 
+            return null;
+          }}/>
+          <Route path="/mail" element={<Index />} component={() => { 
+            console.log('Mail');
+            var link = document.createElement('a');
+            link.href = 'mailto:apexindiachd@gmail.com';
+            document.body.appendChild(link);
+
+            link.click(); 
+            return null;
+          }}/>
         </Routes>
       </Router>
     </div>

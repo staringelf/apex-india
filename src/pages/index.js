@@ -8,6 +8,9 @@ const Index = () => (
     description={"Apex India"
     + 'co-founder and CTO of Arthena, and YC Alumni.'}
   >
+    <section className="w-full h-screen bg-hero bg-cover bg-center">
+
+    </section>
     <article className="post" id="index">
       <header>
         <div className="title">

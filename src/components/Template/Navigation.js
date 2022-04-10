@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import NavDrawer from "./NavDrawer";
+import Container from './Container';
 import routes from 'data/routes';
 
 // Websites Navbar, displays routes defined in 'src/data/routes'
 const Navigation = () => (
-  <header className="header shadow-md" id="header">
-    <div className="container mx-auto px-4">
+  <header className="header shadow-md sticky top-0 z-20 bg-secondary" id="header">
+    <Container>
       <div className="flex justify-between header-container">
         <h1 id="logo-header" className="index-link logo logo--header">
           {routes.filter((l) => l.index).map((l) => (
@@ -26,7 +27,7 @@ const Navigation = () => (
         <NavDrawer />
        
       </div>
-    </div>
+    </Container>
   </header>
 );
 
